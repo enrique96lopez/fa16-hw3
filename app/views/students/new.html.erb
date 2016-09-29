@@ -1,0 +1,26 @@
+<form action="/students" method="POST">
+  <label>Full name</label>
+
+  <input 
+    name="s_full_name" 
+    placeholder= <%= @placeholder_s_full_name %>
+    type="text"
+    >
+  </input>
+  <label>Date of Last Breakdown?</label>
+  <input
+    name="s_date_of_last_breakdown"
+    placeholder=<%=@placeholder_s_date_of_last_breakdown %>
+    type="text"
+  >
+  </input>
+  <br>
+  <label>Least Favorite Professor?</label> 
+  <input 
+    name="s_least_favorite_professor" 
+    placeholder=<%= @placeholder_s_least_favorite_professor%>
+    type="text">
+    </input>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <button type="submit">Create student</button>
+</form>
